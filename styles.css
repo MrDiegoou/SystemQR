@@ -1,0 +1,27 @@
+.body {
+    background: rgb(240, 138, 160);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 600px;
+    margin: 200px auto;
+    display: flex;
+    background-color: antiquewhite;
+    border-radius: 11px;
+    box-shadow: 6px 6px 30px rgb(255, 255, 255) -6px -6px 30px rgb(255, 255, 255);
+}
+
+.registro{
+    
+    border: none;
+    background-color: rgb(255, 255, 255);
+    padding: 7px;
+    color: rgb(0, 0, 0);
+    margin: 10px 30px;
+    font-size: 13px;
+    font-weight:200PX;
+    border-radius: 5px;
+   
+}
