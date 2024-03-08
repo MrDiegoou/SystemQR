@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qr Dynamic</title>
-    <link rel="icon" href="./Storage_pc/eym.png">
+    <title>Document</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    <div class="#">
-        <div class="#">
-            <label class="#">Nombre Completo</label>
-            <input type="text" name="Nombres" id="Nombres" autofocus><span class="#"></span>
-        </div>
-        <br><br><br>
-        <div class="#">
-            <label class="#">Cedula</label>
-            <input type="number" name="Cedula" id="Cedula" autofocus><span class="#"></span>
-        </div>
-        <br><br><br>
-        <div>
-            <form action="">
-                <label for="option ">Area</label>
-                <select name="option" id="option">
-                    <option value="valor1">-</option>
-                    <option value="valor1">#</option>
-                    <option value="valor2">#</option>
-                    <option value="valor3">#</option>
-                    <option value="valor4">#</option>
-                </select>
-            </form>
-        </div>
-        <br> <br><br>
-        <div>
-            <form action="">
-                <label for="option ">Eps</label>
-                <select name="option" id="option">
-                    <option value="valor1">-</option>
-                    <option value="valor1">Compensar</option>
-                    <option value="valor2">Famisanar</option>
-                    <option value="valor3">Sanitas</option>
-                    <option value="valor4">Nueva EPS</option>
-                </select>
-            </form>
-        </div>
-        <br><br><br>
-        <div>
-            <label class="#">C.C. </label>
-            <input type="text" name="Nombres" id="Nombres" autofocus><span class="info"></span>
-            <div>
-                <br><br><br>
-                <div>
-                    <button type="submit"><span>INGRESAR</span></button>
-                </div>
+    <div class="container">
+        <div class="registro">
+            <center>
+                <form id="form">
+                    <img src="./Storage_pc/eym.png" class="logo">
+                    <h1>Bienvenido a <span class="jkl">Espacio & Mercadeo</span></h1>
+
+                    <p id="warnings" class="warnings"></p>
+
+                    <label class="lbl1">Nombres</label>
+                    <input type="text" name="Nombres" id="Nombres" autofocus><span class="info"></span>
+
+                    <label class="lbl1">Apellidos</label>
+                    <input type="text" name="Apellidos" id="Apellidos" autofocus><span class="info"></span>
+
+                    <label class="lbl1">Cedula</label>
+                    <input type="number" name="number" id="number" autofocus><span class="info"></span>
+
+                    <form class="lbl1"  >
+                        <label for="option" class="lbl1">Area</label>
+                        <select name="option" id="option" >
+                            <option value="valor1">-</option>
+                            <option value="valor1">#</option>
+                            <option value="valor2">#</option>
+                            <option value="valor3">#</option>
+                            <option value="valor4">#</option>
+                        </select>
+                    </form>
 
 
-            </div>
 
-            <script src="./app.js"></script>
-    
+                    <form action="">
+                        <label for="option" class="lbl1">Eps</label>
+                        <select name="option" id="option">
+                            <option value="valor1">-</option>
+                            <option value="valor1">Compensar</option>
+                            <option value="valor2">Famisanar</option>
+                            <option value="valor3">Sanitas</option>
+                            <option value="valor4">Nueva EPS</option>
+                        </select>
+                    </form>
+                
+
+
+                    <label class="lbl1">Número de teléfono</label>
+                    <input type="number" name="number" id="number" class="info" autofocus>
+                    <p id="warnings2"></p>
+
+
+                    <br><br>
+                    <button type="submit"><span>Continuar</span></button>
+                    <br><br>
+
+                </form>
+            </center>
+        </div>
+    </div>
+
 </body>
-</html>
 
+</html>

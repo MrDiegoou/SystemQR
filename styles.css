@@ -1,27 +1,117 @@
+
+/* Diseño container y container registro */
 .body {
-    background: rgb(240, 138, 160);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: none;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
 }
 
 .container {
-    width: 600px;
-    margin: 200px auto;
+    width: 750px;
+    margin: 100px auto ;
     display: flex;
-    background-color: antiquewhite;
+    background: white;
     border-radius: 11px;
-    box-shadow: 6px 6px 30px rgb(255, 255, 255) -6px -6px 30px rgb(255, 255, 255);
+    box-shadow: 6px 6px 30px gray, -6px -6px 30px gray;
+ 
+}
+.registro{
+    margin: 100px auto;
+    width: 500px;
+    border: none;
+    background-color: white;
+    padding: 7px;
+    font-size: 13px;
+    border-radius:  5px;
 }
 
-.registro{
+/* titulo E&M*/
+form {
+    /*width: 350px;*/
+    margin: 10px auto;
     
-    border: none;
-    background-color: rgb(255, 255, 255);
-    padding: 7px;
-    color: rgb(0, 0, 0);
-    margin: 10px 30px;
-    font-size: 13px;
-    font-weight:200PX;
-    border-radius: 5px;
-   
+  }
+form h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+/* Color letras separadas titulo */
+.jkl{
+  /*color:  darksalmon;*/
 }
+
+/* organizacion de labels (Nombre, apellido, cedula, area, eps, correo, numero)*/
+.lbl1{
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px;
+    margin-right: 50px;
+    text-align: start
+}
+
+/* Imput por medio de escritura */
+input {
+    width: 100%;
+    padding:  8px;
+    margin: 4px;
+    outline:  none;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(226, 226, 226);
+    
+}
+
+form option {
+    width: 75%;
+    padding: 8px;
+    margin: 4px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* boton envio */
+button {
+    width: 250px;
+    margin: 2px;
+    padding: 8px;
+    background: rgb(226, 226, 226);
+    ;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  
+button span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+button:hover span {
+    padding-right: 30px;
+  }
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
