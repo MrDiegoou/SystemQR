@@ -7,7 +7,6 @@
     <title>E&M Registrer</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="icon" href="./Storage_pc/eym.png">
-
 </head>
 
 <body>
@@ -51,11 +50,13 @@
                             <span class="selected">EPS</span>
                             <div class="carect">
                                 <ul class="menu">
-                                    <li>EPS 1</li>
-                                    <li>EPS 2</li>
-                                    <li>EPS 3</li>
-                                    <li>EPS 4</li>
-                                    <li>EPS 5</li>
+                                    <li>Salud Total</li>
+                                    <li>Sura</li>
+                                    <li>Famisanar</li>
+                                    <li>Sanitas</li>
+                                    <li>Compensar</li>
+                                    <li>Nueva EPS</li>  
+                                    <li>Compensar</li>
                                 </ul>
                             </div>
                         </div>
@@ -74,41 +75,7 @@
             </center>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const formElement = document.getElementById('form');
-            const nombre = document.getElementById('Nombres');
-            const apellidos = document.getElementById('Apellidos');
-            const cedula = document.getElementById('number');
-            const numeroTelefono = document.getElementById('numeroTelefono');
-            const warnings = document.getElementById('warnings');
-    
-            formElement.addEventListener('submit', async (event) => {
-                event.preventDefault();
-    
-                // Validaciones
-                if (nombre.value === "" || apellidos.value === "" || cedula.value === "" || numeroTelefono.value === "") {
-                    warnings.textContent = "Por favor, complete todos los campos.";
-                    return;
-                }
-    
-                const cedulaRegex = /^\d{10}$/;
-                if (!cedulaRegex.test(cedula.value)) {
-                    warnings.textContent = "Ingrese una cédula válida (10 dígitos).";
-                    return;
-                }
-    
-                const numeroTelefonoRegex = /^\d{10}$/;
-                if (!numeroTelefonoRegex.test(numeroTelefono.value)) {
-                    warnings.textContent = "Ingrese un número de teléfono válido (10 dígitos).";
-                    return;
-                }
-    
-                warnings.textContent = "";
-            });
-        });
-    </script>
-    
+    <script src="./validacion.js"></script>
     <script src="./menu.js"></script>
 </body>
 
