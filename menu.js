@@ -1,43 +1,48 @@
-// get all dropdowns from the html
+// Obtener todos los elementos de menú desplegable del HTML
 const dropdowns = document.querySelectorAll('.dropdown');
 
-// loop through all dropdown elements
+// Iterar a través de todos los elementos de menú desplegable
 dropdowns.forEach(dropdown => {
-    // Get inner elements from each dropdown
+    // Obtener los elementos internos de cada menú desplegable
     const select = dropdown.querySelector('.select');
     const caret = dropdown.querySelector('.caret');
     const menu = dropdown.querySelector('.menu');
     const options = dropdown.querySelectorAll('.menu li');
     const selected = dropdown.querySelector('.selected');
 
-    // add click event to the select element
+    // Abrir el menú al hacer clic en el select
     select.addEventListener('click', () => {
-        // toggle the clicked select styles on the select element
+        // Alternar los estilos del select al que se le hizo clic
         select.classList.toggle('select-clicked');
-        // toggle the rotate styles on the caret element
+        // Alternar los estilos de rotación en el elemento caret
         caret.classList.toggle('caret-rotate');
-        // toggle the open styles on the menu element
+        // Alternar los estilos de apertura en el elemento de menú
         menu.classList.toggle('menu-open');
     });
 
-    // loop through all option elements
+    // Iterar a través de todos los elementos de opción
     options.forEach(option => {
-        // add a click event to the option element
+        // Agregar un evento de clic al elemento de opción
         option.addEventListener('click', () => {
-            // change the selected inner text to the clicked option inner text
+            // Cambiar el texto interno seleccionado al texto interno de la opción en la que se hizo clic
             selected.innerText = option.innerText;
-            // remove select-clicked class from select element
+            // Eliminar la clase select-clicked del elemento select
             select.classList.remove('select-clicked');
-            // remove caret-rotate class from caret element
+            // Eliminar la clase caret-rotate del elemento caret
             caret.classList.remove('caret-rotate');
-            // remove menu-open class from menu element
+            // Eliminar la clase menu-open del elemento de menú
             menu.classList.remove('menu-open');
-            // remove active class from all option elements
+            // Eliminar la clase activa de todos los elementos de opción
             options.forEach(opt => {
                 opt.classList.remove('active');
             });
-            // add active class to clicked option element
+            // Agregar la clase activa al elemento de opción en el que se hizo clic
             option.classList.add('active');
         });
+    });
+    
+    // Abrir automáticamente el menú al hacer clic en el menú desplegable
+    dropdown.addEventListener('click', () => {
+        menu.classList.toggle('menu-open');
     });
 });
