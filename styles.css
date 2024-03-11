@@ -1,117 +1,205 @@
-
 /* Diseño container y container registro */
 .body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: none;
-    background-repeat: no-repeat;
-    background-size: auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .container {
-    width: 750px;
-    margin: 100px auto ;
-    display: flex;
-    background: white;
-    border-radius: 11px;
-    box-shadow: 6px 6px 30px gray, -6px -6px 30px gray;
- 
+  width: 750px;
+  margin: 100px auto;
+  display: flex;
+  background: white;
+  border-radius: 11px;
+  box-shadow: 6px 6px 30px gold, -6px -6px 30px gold;
+
 }
-.registro{
-    margin: 100px auto;
-    width: 500px;
-    border: none;
-    background-color: white;
-    padding: 7px;
-    font-size: 13px;
-    border-radius:  5px;
+
+.registro {
+  margin: 100px auto;
+  width: 500px;
+  border: none;
+  background-color: white;
+  padding: 7px;
+  font-size: 13px;
+  border-radius: 5px;
 }
 
 /* titulo E&M*/
 form {
-    /*width: 350px;*/
-    margin: 10px auto;
-    
-  }
+  /*width: 350px;*/
+  margin: 10px auto;
+
+}
+
 form h1 {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bolder;
-  }
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
 /* Color letras separadas titulo */
-.jkl{
+.jkl {
   /*color:  darksalmon;*/
 }
 
 /* organizacion de labels (Nombre, apellido, cedula, area, eps, correo, numero)*/
-.lbl1{
-    display: block;
-    font-size: 17px;
-    font-weight: 600;
-    padding: 8px;
-    margin-right: 50px;
-    text-align: start
+.lbl1 {
+  display: block;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 8px;
+  margin-right: 50px;
+  text-align: start
 }
 
 /* Imput por medio de escritura */
 input {
-    width: 100%;
-    padding:  8px;
-    margin: 4px;
-    outline:  none;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(226, 226, 226);
-    
+  width: 100%;
+  padding: 8px;
+  margin: 4px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(226, 226, 226);
 }
 
+
+/*dropdow */
+.dropdown {
+  min-width: 15em;
+  position: relative;
+  margin: 2em;
+}
+
+.dropdown * {
+  box-sizing: border-box;
+}
+
+.select {
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border:  2px silver  solid;
+  border-radius: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* clicked styles (added in JS) */
+.select-clicked {
+  border: 2px wheat solid;
+  box-shadow: 0 0 0.8em gray;
+}
+
+.select:hover {
+  background-color: aliceblue;
+}
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff;
+  transition:  0.3;
+}
+
+/* Rotate styles added in JS)*/
+.caret-rotate {
+  transform: rotate(180deg);
+}
+
+.menu {
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background: white;
+  border: 1px #000000 solid;
+  box-shadow: 0 0.5em 1em rgba (0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  color: black;
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.menu li {
+  padding:  0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background: skyblue;
+}
+
+/* Active styles in JS*/
+.active {
+  background:  paleturquoise;
+}
+
+/* Open styles in JS*/
+.menu-open {
+  display: block;
+  opacity: 1;
+}
+
+
 form option {
-    width: 75%;
-    padding: 8px;
-    margin: 4px;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    background-color: white;
+  width: 75%;
+  padding: 8px;
+  margin: 4px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
 }
 
 /* boton envio */
 button {
-    width: 250px;
-    margin: 2px;
-    padding: 8px;
-    background: rgb(226, 226, 226);
-    ;
-    outline: none;
-    border: none;
-    border-radius: 15px;
-    color: rgb(0, 0, 0);
-    font-size: 17px;
-    cursor: pointer;
-    transition: 0.5s;
-  }
-  
+  width: 250px;
+  margin: 2px;
+  padding: 8px;
+  background: rgb(226, 226, 226);
+  ;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
 button span {
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
 
 button span:after {
-    content: "\00bb";
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
 
 button:hover span {
-    padding-right: 30px;
-  }
+  padding-right: 30px;
+}
 
 button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-
-
+  opacity: 1;
+  right: 0;
+}

@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>E&M Registrer</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./Storage_pc/eym.png">
+    
 </head>
 
 <body>
@@ -27,32 +29,23 @@
                     <label class="lbl1">Cedula</label>
                     <input type="number" name="number" id="number" autofocus><span class="info"></span>
 
-                    <form class="lbl1"  >
-                        <label for="option" class="lbl1">Area</label>
-                        <select name="option" id="option" >
-                            <option value="valor1">-</option>
-                            <option value="valor1">#</option>
-                            <option value="valor2">#</option>
-                            <option value="valor3">#</option>
-                            <option value="valor4">#</option>
-                        </select>
-                    </form>
-
-
-
-                    <form action="">
-                        <label for="option" class="lbl1">Eps</label>
-                        <select name="option" id="option">
-                            <option value="valor1">-</option>
-                            <option value="valor1">Compensar</option>
-                            <option value="valor2">Famisanar</option>
-                            <option value="valor3">Sanitas</option>
-                            <option value="valor4">Nueva EPS</option>
-                        </select>
-                    </form>
-                
-
-
+                    <label class="lbl1">Area</label>
+                    <div class="dropdown">
+                        <div class="select">
+                            <span class="selected">Area</span>
+                            <div class="carect"></div>
+                        
+                        <ul class="menu">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                        </ul>
+                    </div>                        
+                    </div>        
+                     
+                    
                     <label class="lbl1">Número de teléfono</label>
                     <input type="number" name="number" id="number" class="info" autofocus>
                     <p id="warnings2"></p>
@@ -66,7 +59,7 @@
             </center>
         </div>
     </div>
-
+    <script src="./menu.js"></script>
 </body>
 
 </html>
