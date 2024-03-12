@@ -9,7 +9,6 @@
 .container {
   width: 750px;
   margin: 100px auto;
-  display: flex;
   background: white;
   border-radius: 11px;
   box-shadow: 6px 6px 30px gold, -6px -6px 30px gold;
@@ -39,10 +38,12 @@ form h1 {
   font-weight: bolder;
 }
 
-/* Color letras separadas titulo */
+/* Color letras separadas titulo 
 .jkl {
-  /*color:  darksalmon;*/
+  color:  darksalmon;
 }
+*/
+
 
 /* organizacion de labels (Nombre, apellido, cedula, area, eps, correo, numero)*/
 .lbl1 {
@@ -204,4 +205,15 @@ button:hover span {
 button:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+/*Responsive */
+@media only screen and (max-width: 900px) {
+  .container {
+    margin: 50px auto; /* Ajusté el margen para pantallas pequeñas */
+  }
+  
+  .registro {
+    margin: 30px auto; /* Ajusté el margen para pantallas pequeñas */
+  }
 }
