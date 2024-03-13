@@ -10,6 +10,23 @@ dropdowns.forEach(dropdown => {
     const options = dropdown.querySelectorAll('.menu li');
     const selected = dropdown.querySelector('.selected');
 
+    // Función para guardar el estado del formulario en localStorage
+    function guardarEstadoFormulario() {
+        const opcionSeleccionada = selected.innerText;
+        localStorage.setItem('opcionSeleccionada', opcionSeleccionada);
+    }
+
+    // Función para cargar el estado del formulario desde localStorage
+    function cargarEstadoFormulario() {
+        const opcionGuardada = localStorage.getItem('opcionSeleccionada');
+        if (opcionGuardada) {
+            selected.innerText = opcionGuardada;
+        }
+    }
+
+    // Llamar a la función para cargar el estado del formulario al cargar la página
+    cargarEstadoFormulario();
+
     // Abrir el menú al hacer clic en el select
     select.addEventListener('click', () => {
         // Alternar los estilos del select al que se le hizo clic
@@ -38,6 +55,8 @@ dropdowns.forEach(dropdown => {
             });
             // Agregar la clase activa al elemento de opción en el que se hizo clic
             option.classList.add('active');
+            // Guardar el estado del formulario al seleccionar una opción
+            guardarEstadoFormulario();
         });
     });
     

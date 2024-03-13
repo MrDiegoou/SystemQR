@@ -63,7 +63,10 @@ input {
   outline: none;
   border: none;
   border-radius: 5px;
-  background-color: rgb(226, 226, 226);
+  border: 2px wheat solid;
+  box-shadow: 0 0 0.8em gray;
+
+  /*background-color: rgb(226, 226, 226);*/
 }
 
 

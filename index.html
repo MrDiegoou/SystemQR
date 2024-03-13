@@ -1,82 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Definición del tipo de documento -->
+<html lang="en"> <!-- Definición del idioma -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E&M Registrer</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="icon" href="./Storage_pc/eym.png">
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la visualización en dispositivos móviles -->
+    <title>E&M Registrer</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="./styles/styles.css"> <!-- Enlace al archivo de estilos CSS -->
+    <link rel="icon" href="./Storage_pc/eym.png"> <!-- Ícono de la página -->
 </head>
 
 <body>
-    <div class="container">
-        <div class="registro" >
+    <div class="container"> <!-- Contenedor principal -->
+        <div class="registro"> <!-- Formulario de registro -->
             <center>
-                <form id="form">
-                    <img src="./Storage_pc/eym.png" class="logo">
-                    <h1>Bienvenido a <span class="jkl">Espacio & Mercadeo</span></h1>
-                    <h3>Por favor ingresa tus datos para poder tener un registro exitoso :)</h3>
-                    <p id="warnings" class="warnings"></p>
+                <form method="post" id="form"> <!-- Formulario con el método de envío POST y un identificador -->
+                    <img src="./Storage_pc/eym.png" class="logo"> <!-- Imagen del logotipo -->
+                    <h1>Bienvenido a <span class="jkl">Espacio & Mercadeo</span></h1> <!-- Título principal -->
+                    <h3>Por favor ingresa tus datos para poder tener un registro exitoso :)</h3> <!-- Subtítulo -->
+                    <p id="warnings" class="warnings"></p> <!-- Párrafo para mostrar advertencias -->
 
+                    <!-- Campos de entrada para nombres, apellidos, cédula, área y EPS -->
                     <label class="lbl1">Nombres</label>
-                    <input type="text" name="Nombres" id="Nombres" autofocus autocomplete="#"><span class="info"></span>
+                    <input type="text" name="nombres" id="nombres" autofocus autocomplete="off" required maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóú\s]+" title="Solo se permiten letras y espacios"><span class="info"></span>
 
                     <label class="lbl1">Apellidos</label>
-                    <input type="text" name="Apellidos" id="Apellidos" autofocus autocomplete="#"><span class="info"></span>
+                    <input type="text" name="apellidos" id="apellidos" autofocus autocomplete="off" required maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóú\s]+" title="Solo se permiten letras y espacios"><span class="info"></span>
 
                     <label class="lbl1">Cedula</label>
-                    <input type="number" name="number" id="number" autofocus autocomplete="#"><span class="info"></span>
+                    <input type="text" name="cedula" id="cedula" autofocus autocomplete="off" required maxlength="10" pattern="[0-9]+" title="Solo se permiten números"><span class="info"></span>
 
+
+                    <!-- Menú desplegable para seleccionar el área -->
                     <label class="lbl1">Area</label>
                     <div class="dropdown">
                         <div class="select">
-                            <span class="selected">Area</span>
+                            <span class="selected" id="selectedArea">Area</span>
                             <div class="carect">
                                 <ul class="menu">
-                                    <li>Area 1</li>
-                                    <li>Area 2</li>
-                                    <li>Area 3</li>
-                                    <li>Area 4</li>
-                                    <li>Area 5</li>
+                                    <li onclick="selectOption('area', 'Area 1')">Area 1</li>
+                                    <li onclick="selectOption('area', 'Area 2')">Area 2</li>
+                                    <li onclick="selectOption('area', 'Area 3')">Area 3</li>
+                                    <li onclick="selectOption('area', 'Area 4')">Area 4</li>
+                                    <li onclick="selectOption('area', 'Area 5')">Area 5</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
                     <label class="lbl1">EPS</label>
+                    <!-- Menú desplegable para seleccionar la EPS -->
                     <div class="dropdown">
                         <div class="select">
-                            <span class="selected">EPS</span>
+                            <span class="selected" id="selectedEps">EPS</span>
                             <div class="carect">
                                 <ul class="menu">
-                                    <li>Salud Total</li>
-                                    <li>Sura</li>
-                                    <li>Famisanar</li>
-                                    <li>Sanitas</li>
-                                    <li>Compensar</li>
-                                    <li>Nueva EPS</li>  
-                                    <li>Compensar</li>
+                                    <li onclick="selectOption('eps', 'Salud Total')">Salud Total</li>
+                                    <li onclick="selectOption('eps', 'Sura')">Sura</li>
+                                    <li onclick="selectOption('eps', 'Nueva EPS')">Nueva EPS</li>
+                                    <li onclick="selectOption('eps', 'Coosalud')">Coosalud</li>
+                                    <li onclick="selectOption('eps', 'Capital Salud')">Capital Salud</li>
+                                    <li onclick="selectOption('eps', 'Famisanar')">Famisanar</li>
+                                    <li onclick="selectOption('eps', 'Compensar')">Compensar</li>
+                                    <li onclick="selectOption('eps', 'EPM')">EPM</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <label class="lbl1">Número de teléfono</label>
-                    <input type="number" name="number" id="number" class="info" autofocus>
-                    <p id="warnings2"></p>
+                    <input type="hidden" name="area" id="hiddenArea">
+                    <input type="hidden" name="eps" id="hiddenEps">
 
+
+                    <!-- Campo de entrada para el número de teléfono -->
+                    <label class="lbl1">Número de teléfono</label>
+                    <input type="number" name="numero" id="number" class="info" autofocus autocomplete="off">
+                    <p id="warnings2"></p> <!-- Párrafo para mostrar advertencias -->
 
                     <br><br>
-                    <button type="submit"><span>Enviar</span></button>
+                    <button type="button" id="register"><span>Enviar</span></button> <!-- Botón para enviar el formulario -->
                     <br><br>
 
                 </form>
             </center>
         </div>
     </div>
-    <script src="./js/validacion.js"></script>
-    <script src="./js/menu.js"></script>
+
+    <?php
+    include("registrar.php"); // Incluye el script PHP para el registro
+    ?>
+
+    <script src="./js/button.js"></script>
+
+    <script src="./js/.js"></script> <!-- Enlace al script JavaScript -->
+    <script src="./js/menu.js"></script> <!-- Enlace al script JavaScript -->
 </body>
 
 </html>
