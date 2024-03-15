@@ -50,7 +50,7 @@ if (isset($_POST['register'])) {
 
             // Ejecuta la consulta
             if (mysqli_stmt_execute($stmt)) {
-                echo '¡Registro exitoso!';
+                echo '¡Tu registro ha sido todo un éxito! Que tengas un día increíble lleno de logros y oportunidades. ¡Espacio y Mercadeo está aquí para hacer brillar tu día!';
             } else {
                 echo 'Hubo un error al registrar. Por favor, inténtelo de nuevo más tarde.';
             }

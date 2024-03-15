@@ -7,6 +7,9 @@
     <title>E&M Registrer</title> <!-- Título de la página -->
     <link rel="stylesheet" href="./styles/styles.css"> <!-- Enlace al archivo de estilos CSS -->
     <link rel="icon" href="./Storage_pc/eym.png"> <!-- Ícono de la página -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,7 +19,7 @@
                 <form method="post" id="form"> <!-- Formulario con el método de envío POST y un identificador -->
                     <img src="./Storage_pc/eym.png" class="logo"> <!-- Imagen del logotipo -->
                     <h1>Bienvenido a <span class="jkl">Espacio & Mercadeo</span></h1> <!-- Título principal -->
-                    <h3>Por favor ingresa tus datos para poder tener un registro exitoso :)</h3> <!-- Subtítulo -->
+                    <h3>Estamos encantados de tenerte aquí. Te presentamos nuestro sistema de QR para que ingresar tus datos sea más fácil que nunca. ¡Juntos, alcanzaremos grandes cosas!</h3> <!-- Subtítulo -->
                     <p id="warnings" class="warnings"></p> <!-- Párrafo para mostrar advertencias -->
 
                     <!-- Campos de entrada para nombres, apellidos, cédula, área y EPS -->
@@ -27,7 +30,7 @@
                     <input type="text" name="apellidos" id="apellidos" autofocus autocomplete="off" required maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóú\s]+" title="Solo se permiten letras y espacios"><span class="info"></span>
 
                     <label class="lbl1">Cedula</label>
-                    <input type="text" name="cedula" id="cedula" autofocus autocomplete="off" required maxlength="10" pattern="[0-9]+" title="Solo se permiten números"><span class="info"></span>
+                    <input type="number" name="cedula" id="cedula" autofocus autocomplete="off" required maxlength="10" pattern="[0-9]+" title="Solo se permiten números"><span class="info"></span>
 
 
                     <!-- Menú desplegable para seleccionar el área -->

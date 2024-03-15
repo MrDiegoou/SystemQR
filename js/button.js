@@ -17,7 +17,7 @@ document.getElementById("register").addEventListener("click", function(event) {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 var response = xhr.responseText;
-                if (response === '¡Registro exitoso!') {
+                if (response === '¡Tu registro ha sido todo un éxito! Que tengas un día increíble lleno de logros y oportunidades. ¡Espacio y Mercadeo está aquí para hacer brillar tu día!') {
                     // Si el registro es exitoso, mostrar una alerta y recargar la página
                     alert(response);
                     window.location.reload();

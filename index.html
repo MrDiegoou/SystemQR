@@ -16,7 +16,7 @@
                 <form method="post" id="form"> <!-- Formulario con el método de envío POST y un identificador -->
                     <img src="./Storage_pc/eym.png" class="logo"> <!-- Imagen del logotipo -->
                     <h1>Bienvenido a <span class="jkl">Espacio & Mercadeo</span></h1> <!-- Título principal -->
-                    <h3>Por favor ingresa tus datos para poder tener un registro exitoso :)</h3> <!-- Subtítulo -->
+                    <h3>Estamos encantados de tenerte aquí. Te presentamos nuestro sistema de QR para que ingresar tus datos sea más fácil que nunca. ¡Juntos, alcanzaremos grandes cosas!</h3> <!-- Subtítulo -->
                     <p id="warnings" class="warnings"></p> <!-- Párrafo para mostrar advertencias -->
 
                     <!-- Campos de entrada para nombres, apellidos, cédula, área y EPS -->
@@ -27,7 +27,7 @@
                     <input type="text" name="apellidos" id="apellidos" autofocus autocomplete="off" required maxlength="20" pattern="[A-Za-zÁÉÍÓÚáéíóú\s]+" title="Solo se permiten letras y espacios"><span class="info"></span>
 
                     <label class="lbl1">Cedula</label>
-                    <input type="number" name="cedula" id="cedula" autofocus autocomplete="off" required maxlength="10" pattern="[0-9]+" title="Solo se permiten números"><span class="info"></span>
+                    <input type="text" name="cedula" id="cedula" autofocus autocomplete="off" required maxlength="10" pattern="[0-9]+" title="Solo se permiten números"><span class="info"></span>
 
 
                     <!-- Menú desplegable para seleccionar el área -->
@@ -85,13 +85,11 @@
         </div>
     </div>
 
-    <?php
+    ??php
     include("registrar.php"); // Incluye el script PHP para el registro
     ?>
 
-    <script src="./js/button.js"></script>
-
-    <script src="./js/.js"></script> <!-- Enlace al script JavaScript -->
+    <script src="./js/button.js"></script> <!-- Enlace al script JavaScript -->
     <script src="./js/menu.js"></script> <!-- Enlace al script JavaScript -->
 </body>
 
