@@ -2,18 +2,22 @@
 // Incluye el archivo de conexión a la base de datos
 include("conexion.php");
 
+// Habilitar la visualización de errores de PHP
+ini_set('display_errors', 1);
+
 // Verifica si se han enviado datos del formulario de registro
 if (isset($_POST['register'])) {
     // Obtén los datos del formulario y realiza la validación
     $nombres = $_POST['nombres'];
     $apellidos = $_POST['apellidos'];
     $cedula = $_POST['cedula'];
+    $seleccionar = $_POST['seleccionar'];
     $area = $_POST['area'];
     $eps = $_POST['eps'];
-    $numero = $_POST['numero']; // Ajuste en el nombre del campo
+    $numero = $_POST['numero']; 
 
     // Validación de datos
-    if (empty($nombres) || empty($apellidos) || empty($cedula) || empty($area) || empty($eps) || empty($numero)) {
+    if (empty($nombres) || empty($apellidos) || empty($cedula)  || empty($area) || empty($eps) || empty($numero)) {
         echo 'Por favor completa todos los campos.';
     } else {
         try {
@@ -27,7 +31,6 @@ if (isset($_POST['register'])) {
                 throw new Exception('Formato de apellido incorrecto. No se permiten números ni caracteres especiales.');
             }
 
-
             // Validar formato de la cédula
             if (!preg_match('/^[0-9]{10}$/', $cedula)) {
                 throw new Exception('Formato de cédula incorrecto. Debe ser una cédula válida.');
@@ -38,15 +41,14 @@ if (isset($_POST['register'])) {
                 throw new Exception('Formato de número incorrecto. Debe tener entre 9 y 10 dígitos.');
             }
 
-
             // Crea la consulta SQL preparada
-            $consulta = "INSERT INTO usuarios (nombres, apellidos, cedula, area, eps, numero, fecha, hora) VALUES (?, ?, ?, ?, ?, ?, CURDATE(), CURTIME())";
+            $consulta = "INSERT INTO usuarios (nombres, apellidos, cedula, seleccionar, area, eps, numero, fecha, hora) VALUES (?, ?, ?, ?, ?, ?, ?, CURDATE(), CURTIME())";
 
             // Prepara la consulta
             $stmt = mysqli_prepare($conex, $consulta);
 
             // Vincula los parámetros a la consulta
-            mysqli_stmt_bind_param($stmt, "ssisss", $nombres, $apellidos, $cedula, $area, $eps, $numero);
+            mysqli_stmt_bind_param($stmt, "ssissss", $nombres, $apellidos, $cedula, $seleccionar, $area, $eps, $numero);
 
             // Ejecuta la consulta
             if (mysqli_stmt_execute($stmt)) {
@@ -63,3 +65,4 @@ if (isset($_POST['register'])) {
         }
     }
 }
+?>

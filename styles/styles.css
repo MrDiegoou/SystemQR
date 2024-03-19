@@ -134,6 +134,7 @@ input {
   /*opacity: 0.2; <- opacidad del container */
   transition: 0.2s;
   z-index: 1;
+  display: none; /* Ocultar el menú desplegable por defecto */
 }
 
 .menu li {
@@ -154,7 +155,7 @@ input {
 
 /* Open styles in JS*/
 .menu-open {
-  display: none;
+  display: block;
   opacity: 1;
   transition: 0.2s;
 }

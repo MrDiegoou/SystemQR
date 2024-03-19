@@ -10,11 +10,18 @@ dropdowns.forEach(dropdown => {
     const options = dropdown.querySelectorAll('.menu li');
     const selected = dropdown.querySelector('.selected');
 
-    // Función para guardar el estado del formulario en localStorage
+    // Función para guardar el estado del formulario en localStorage y actualizar los valores de los campos ocultos
     function guardarEstadoFormulario() {
         const opcionSeleccionada = selected.innerText;
         localStorage.setItem('opcionSeleccionada', opcionSeleccionada);
+        document.getElementById('hiddenIngreso').value = opcionSeleccionada; // Actualizar el valor del campo oculto de ingreso
+
+        // También actualiza los valores de los campos ocultos correspondientes para el área y EPS si es necesario
+        // Por ejemplo:
+        // document.getElementById('hiddenArea').value = valor_del_area_seleccionada;
+        // document.getElementById('hiddenEps').value = valor_de_eps_seleccionada;
     }
+
 
     // Función para cargar el estado del formulario desde localStorage
     function cargarEstadoFormulario() {
@@ -59,7 +66,7 @@ dropdowns.forEach(dropdown => {
             guardarEstadoFormulario();
         });
     });
-    
+
     // Abrir automáticamente el menú al hacer clic en el menú desplegable
     dropdown.addEventListener('click', () => {
         menu.classList.toggle('menu-open');

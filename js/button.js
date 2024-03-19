@@ -17,16 +17,11 @@ document.getElementById("register").addEventListener("click", function(event) {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 var response = xhr.responseText;
-                if (response === '¡Tu registro ha sido todo un éxito! Que tengas un día increíble lleno de logros y oportunidades. ¡Espacio y Mercadeo está aquí para hacer brillar tu día!') {
-                    // Si el registro es exitoso, mostrar una alerta y recargar la página
-                    alert(response);
-                    window.location.reload();
-                } else {
-                    // Si hay un error, mostrar una alerta al usuario
-                    alert(response);
+                alert(response); // Mostrar respuesta del servidor en una alerta
+                if (response.includes('éxito')) {
+                    window.location.reload(); // Recargar la página si el registro es exitoso
                 }
             } else {
-                // Si hay un error de red, mostrar una alerta al usuario
                 alert("Error de red al procesar la solicitud. Por favor, inténtelo de nuevo.");
             }
         }
