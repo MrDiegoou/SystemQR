@@ -1,9 +1,13 @@
 /* Diseño container y container registro */
-.body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+body {
   background-image: none;
   background-repeat: no-repeat;
   background-size: auto;
+  background-color: azure; /* Cambié el color de fondo a azure */
+  font-family: 'Flamenco', system-ui;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .container {
@@ -12,7 +16,6 @@
   background: white;
   border-radius: 11px;
   box-shadow: 6px 6px 30px gold, -6px -6px 30px gold;
-
 }
 
 .registro {
@@ -29,7 +32,6 @@
 form {
   /*width: 350px;*/
   margin: 10px auto;
-
 }
 
 form h1 {
@@ -38,13 +40,6 @@ form h1 {
   font-weight: bolder;
 }
 
-/* Color letras separadas titulo 
-.jkl {
-  color:  darksalmon;
-}
-*/
-
-
 /* organizacion de labels (Nombre, apellido, cedula, area, eps, correo, numero)*/
 .lbl1 {
   display: block;
@@ -52,7 +47,7 @@ form h1 {
   font-weight: 600;
   padding: 8px;
   margin-right: 50px;
-  text-align: start
+  text-align: start;
 }
 
 /* Imput por medio de escritura */
@@ -68,7 +63,6 @@ input {
 
   /*background-color: rgb(226, 226, 226);*/
 }
-
 
 /*dropdow */
 .dropdown {
@@ -87,7 +81,7 @@ input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border:  2px silver  solid;
+  border: 2px silver solid;
   border-radius: 0.5em;
   padding: 1em;
   cursor: pointer;
@@ -110,7 +104,7 @@ input {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 6px solid #fff;
-  transition:  0.3;
+  transition: 0.3s;
 }
 
 /* Rotate styles added in JS)*/
@@ -123,7 +117,7 @@ input {
   padding: 0.2em 0.5em;
   background: #f0f0f0; /* Cambié el color de fondo a un tono más claro */
   border: 1px #000000 solid;
-  box-shadow: 0 0.5em 1em rgba (0, 0, 0, 0.2);
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
   border-radius: 0.5em;
   color: black;
   position: absolute;
@@ -138,7 +132,7 @@ input {
 }
 
 .menu li {
-  padding:  0.7em 0.5em;
+  padding: 0.7em 0.5em;
   margin: 0.3em 0;
   border-radius: 0.5em;
   cursor: pointer;
@@ -150,7 +144,7 @@ input {
 
 /* Active styles in JS*/
 .active {
-  background:  paleturquoise;
+  background: paleturquoise;
 }
 
 /* Open styles in JS*/
@@ -159,7 +153,6 @@ input {
   opacity: 1;
   transition: 0.2s;
 }
-
 
 form option {
   width: 75%;
@@ -177,7 +170,6 @@ button {
   margin: 2px;
   padding: 8px;
   background: rgb(226, 226, 226);
-  ;
   outline: none;
   border: none;
   border-radius: 15px;

@@ -32,9 +32,9 @@ if (isset($_POST['register'])) {
             }
 
             // Validar formato de la cédula
-            if (!preg_match('/^[0-9]{10}$/', $cedula)) {
+            if (!preg_match('/^[0-9]{7,10}$/', $cedula)) {
                 throw new Exception('Formato de cédula incorrecto. Debe ser una cédula válida.');
-            }
+            }            
 
             // Validar formato del número
             if (!preg_match('/^[0-9]{9,10}$/', $numero)) {

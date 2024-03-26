@@ -50,11 +50,12 @@
                             <span class="selected" id="selectedArea">Area</span>
                             <div class="carect">
                                 <ul class="menu">
-                                    <li onclick="selectOption('area', 'Talento Humano')">Talento Humano</li>
-                                    <li onclick="selectOption('area', 'Administración y Financiera')">Administración y Financiera</li>
-                                    <li onclick="selectOption('area', 'Operación Logística')">Operación Logística</li>
-                                    <li onclick="selectOption('area', 'Trade y BTL')">Trade y BTL</li>
-                                    <li onclick="selectOption('area', 'BI')">BI</li>
+                                        <li onclick="selectOption('area', 'Talento Humano')">Talento Humano</li>
+                                        <li onclick="selectOption('area', 'Administración y Financiera')">Administración y Financiera</li>
+                                        <li onclick="selectOption('area', 'Operación Logística')">Operación Logística</li>
+                                        <li onclick="selectOption('area', 'Trade y BTL')">Trade y BTL</li>
+                                        <li onclick="selectOption('area', 'BI')">BI</li>
+
                                 </ul>
                             </div>
                         </div>
@@ -67,14 +68,27 @@
                             <span class="selected" id="selectedEps">EPS</span>
                             <div class="carect">
                                 <ul class="menu">
-                                    <li onclick="selectOption('eps', 'Salud Total')">Salud Total</li>
-                                    <li onclick="selectOption('eps', 'Sura')">Sura</li>
-                                    <li onclick="selectOption('eps', 'Nueva EPS')">Nueva EPS</li>
-                                    <li onclick="selectOption('eps', 'Coosalud')">Coosalud</li>
-                                    <li onclick="selectOption('eps', 'Capital Salud')">Capital Salud</li>
-                                    <li onclick="selectOption('eps', 'Famisanar')">Famisanar</li>
-                                    <li onclick="selectOption('eps', 'Compensar')">Compensar</li>
-                                    <li onclick="selectOption('eps', 'EPM')">EPM</li>
+                                        <li onclick="selectOption('eps', 'Salud Total')">Salud Total</li>
+                                        <li onclick="selectOption('eps', 'Aliansalud')">Aliansalud</li>
+                                        <li onclick="selectOption('eps', 'Sura')">Sura</li>
+                                        <li onclick="selectOption('eps', 'Comfenalco Valle')">Comfenalco Valle</li>
+                                        <li onclick="selectOption('eps', 'Famisanar')">Famisanar</li>
+                                        <li onclick="selectOption('eps', 'Nueva EPS')">Nueva EPS</li>
+                                        <li onclick="selectOption('eps', 'S.O.S')">S.O.S</li>
+                                        <li onclick="selectOption('eps', 'Cajacopi')">Cajacopi</li>
+                                        <li onclick="selectOption('eps', 'Coosalud')">Coosalud</li>
+                                        <li onclick="selectOption('eps', 'Comfaoriente')">Comfaoriente</li>
+                                        <li onclick="selectOption('eps', 'Compensar')">Compensar</li>
+                                        <li onclick="selectOption('eps', 'Sanitas')">Sanitas</li>
+                                        <li onclick="selectOption('eps', 'Asmet Salud')">Asmet Salud</li>
+                                        <li onclick="selectOption('eps', 'Mutualer')">Mutualer</li>
+                                        <li onclick="selectOption('eps', 'Capresoca')">Capresoca</li>
+                                        <li onclick="selectOption('eps', 'Comfamiliar Guajira')">Comfamiliar Guajira</li>
+                                        <li onclick="selectOption('eps', 'EMSSANAR')">EMSSANAR</li>
+                                        <li onclick="selectOption('eps', 'Savia Salud')">Savia Salud</li>
+                                        <li onclick="selectOption('eps', 'Capital Salud')">Capital Salud</li>
+                                        <li onclick="selectOption('eps', 'Mallamas')">Mallamas</li>
+
                                 </ul>
                             </div>
                         </div>
@@ -103,7 +117,6 @@
         }
     </script>
     <script src="./js/button.js"></script>
-    <script src="./js/.js"></script>
     <script src="./js/menu.js"></script>
 </body>
 
